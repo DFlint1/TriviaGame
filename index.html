@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TotallyFerretTrivia</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Totally Ferret Trivia!</h1>
+        </div>
+        <div class="buttonHolder">
+        <button class="start">Start</button></div>
+        <div class="row hidden-test">
+            <div class="panel panel-default">
+                <div class="text-center">Time Remaining:</div>
+                <div class="panel panel-default">
+                <div id="counter">30</div>
+                <div id="feedback"></div>
+            </div>
+        </div>
+        <br>
+        <div class="row hidden-test">
+            <div class="questiona">1. How many teeth will you find in a ferret's mouth??</div>
+            <form class="answers">
+                <input type="radio" name="q1" value="a" id="q1a">
+                <label for="q1a"> 34</label>
+                <br/>
+                <input type="radio" name="q1" value="b" id="q1b">
+                <label for="q1b"> 14</label>
+                <br/>
+                <input type="radio" name="q1" value="c" id="q1c">
+                <label for="q1c"> 4</label>
+                <br/>
+                <input type="radio" name="q1" value="d" id="q1d">
+                <label for="q1d"> 24</label>
+                <br/>
+            </form>
+            <div class="row hidden-test">
+            <div class="questionb">2. Which is NOT a relative of the ferret??</div>
+            <form class="answers">
+                <input type="radio" name="q1" value="a" id="q1a">
+                <label for="q1a"> otters</label>
+                <br/>
+                <input type="radio" name="q1" value="b" id="q1b">
+                <label for="q1b"> badgers</label>
+                <br/>
+                <input type="radio" name="q1" value="c" id="q1c">
+                <label for="q1c"> rats</label>
+                <br/>
+                <input type="radio" name="q1" value="d" id="q1d">
+                <label for="q1d"> polecats</label>
+                <br/>
+            </form>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <!-- Script -->
+    <script type="text/javascript" src="Assets/javascript/app.js">
+    </script>
+</body>
+
+</html>

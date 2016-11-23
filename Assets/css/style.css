@@ -1,0 +1,24 @@
+.buttonHolder {
+	text-align: center;
+}
+
+.hidden-test {
+    visibility: hidden
+}
+
+#counter{
+	text-align: center;
+}
+
+.row {
+	text-align:center;
+}
+
+.answers {
+	display: inline-block;
+}
+
+input {
+  display: inline-block;
+  float: left;
+}
