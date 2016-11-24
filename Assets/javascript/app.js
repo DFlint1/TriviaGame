@@ -81,9 +81,95 @@ function countdown() {
   i.innerHTML = parseInt(i.innerHTML) -1;
   if (parseInt(i.innerHTML)==0) {
     clearInterval(timerId);
+     getCheckedValue(radioName);
+    }
   }
-}
+
 var timerId = setInterval(function() { countdown (); },1000);
+//===============================================
+// function displayAnswer() {
+//   userInput = new Array (2);
+
+//  var question0s = document.getElementsByName("question0");
+
+//   for (var i = 0; i < question0s.length; i++) {
+//         if (question0s[i].checked) {
+//             userInput[0] = question0s[i].value;
+//         }
+//     }
+
+//     alert(userInput[0]);
+// }
+
+// var myform = document.getElementById('myform');
+// myform.addEventListener("change", function(){
+//     displayAnswer();
+// });
+
+
+// var userInput = [];
+// var answers = []
+// answers [0] = "a";
+// answers [1] = "c";
+
+// function renderQuiz() {
+//   for (i=0; i<answers.length;i++) {
+
+//   }
+
+
+// function getScore() {
+//   var score =0;
+//   var numQuestions = 2;
+//   var form = document.getElementById('questiona');
+//   userInput[0] = form1.q1.value;
+//   userInput[1] = form1.q2.value;
+
+//   for (var i = 0; i < numQuestions; i++) {
+//     if (userInput[i] == answers[i]) {
+//       score += 1;
+//     } else {
+//       score += 0;
+//     }
+//     }
+//     return score;
+//     console.log ("score");
+//   }
+
+var answers = ["a", "c"], 
+    tot = answers.length;
+
+    function getCheckedValue(radioName){
+    var radios = document.getElementsByName(question0); // Get radio group by-name
+    for(var y=0; y<radios.length; y++)
+      if(radios[y].checked) return radios[y].value; // return the checked value
+  };
+
+// when the clock gets to 0, run function getCheckedValue
+
+
+  function getCheckedValue(radioName){
+    var radios = document.getElementsByName(question1); // Get radio group by-name
+    for(var y=0; y<radios.length; y++)
+      if(radios[y].checked) return radios[y].value; // return the checked value
+        $("question1").click(getScore);
+   $("question").on ("click",function(getScore) { 
+    
+
+     });
+  };
+  
+
+function getScore(){
+  var score = 0;
+  for (var i=0; i<tot; i++)
+    if(getCheckedValue("question"+i)===answers[i]) score += 1; // increment only
+  return score;
+}
+
+function returnScore(){
+  alert("Your score is "+ getScore() +"/"+ tot);
+}
 // var counter;
 // //  Our stopwatch object.
 // var stopwatch = {
@@ -183,7 +269,7 @@ var timerId = setInterval(function() { countdown (); },1000);
 // ==================================================================================================
 
 // // Starts the Game by running the startGame() function
-// startGame();
+startGame();
 
 // // Then initiates the function for capturing key clicks.
 // document.onkeyup = function(event) {
